@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Panel de publicaciones</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">◆</span>
+        <div>
+          <h1>Cola de publicación</h1>
+          <p class="sub" id="repo-sub">configura tu repo en app.js</p>
+        </div>
+      </div>
+      <a class="btn-new" id="new-post-link" href="#" target="_blank" rel="noopener">+ Nueva publicación</a>
+    </header>
+
+    <section class="status-strip" id="status-strip">
+      <div class="status-chip" data-status="pending"><span class="dot"></span>Pendientes: <b id="count-pending">0</b></div>
+      <div class="status-chip" data-status="posted"><span class="dot"></span>Publicadas: <b id="count-posted">0</b></div>
+      <div class="status-chip" data-status="failed"><span class="dot"></span>Con error: <b id="count-failed">0</b></div>
+      <div class="refresh-note">se actualiza al recargar · el publicador corre cada 5 min</div>
+    </section>
+
+    <main>
+      <div id="empty-state" class="empty-state" hidden>
+        <p>Todavía no hay publicaciones en la cola.</p>
+        <p class="muted">Crea la primera con el botón de arriba — es un Issue de GitHub, no necesitas nada más.</p>
+      </div>
+      <ul id="queue" class="queue"></ul>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
