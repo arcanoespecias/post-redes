@@ -1,6 +1,6 @@
 // ⚙️ CONFIGURA ESTO con tu usuario y nombre de repo de GitHub:
-const GITHUB_OWNER = "TU_USUARIO";
-const GITHUB_REPO = "TU_REPO";
+const GITHUB_OWNER = "arcanoespecias";
+const GITHUB_REPO = "post-redes";
 
 document.getElementById("repo-sub").textContent = `${GITHUB_OWNER}/${GITHUB_REPO}`;
 document.getElementById("new-post-link").href =
